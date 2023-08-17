@@ -85,10 +85,14 @@ extern "C" {
 #define OQS_KEM_alg_frodokem_1344_aes "FrodoKEM-1344-AES"
 /** Algorithm identifier for FrodoKEM-1344-SHAKE KEM. */
 #define OQS_KEM_alg_frodokem_1344_shake "FrodoKEM-1344-SHAKE"
+/**Algorithm identifier for RLCE. */
+#define OQS_KEM_alg_RLCE_l1 "RLCE-L1"
+#define OQS_KEM_alg_RLCE_l3 "RLCE-L3"
+#define OQS_KEM_alg_RLCE_l5 "RLCE-L5"
 // EDIT-WHEN-ADDING-KEM
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 /** Number of algorithm identifiers above. */
-#define OQS_KEM_algs_length 26
+#define OQS_KEM_algs_length 29
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_END
 
 /**
@@ -256,6 +260,9 @@ OQS_API OQS_STATUS OQS_KEM_decaps(const OQS_KEM *kem, uint8_t *shared_secret, co
  */
 OQS_API void OQS_KEM_free(OQS_KEM *kem);
 
+#ifdef OQS_ENABLE_KEM_RLCE
+#include <oqs/rlce.h>
+#endif /* OQS_ENABLE_KEM_RLCE */
 #ifdef OQS_ENABLE_KEM_BIKE
 #include <oqs/kem_bike.h>
 #endif /* OQS_ENABLE_KEM_BIKE */

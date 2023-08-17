@@ -1,0 +1,38 @@
+name: RLCE
+type: kem
+principal-submitters:
+- Yongge Wang
+crypto-assumption: random linear code
+website: http://quantumca.org
+nist-round: 1
+spec-version: 1.0
+primary-upstream:
+  source: https://github.com/yonggewang/RLCE/
+  spdx-license-identifier: Apache-2.0
+upstream-ancestors:
+- none
+parameter-sets:
+- name: RLCE-L1
+  claimed-nist-level: 1
+  claimed-security: IND-CPA
+  length-public-key: 188001
+  length-ciphertext: 988
+  length-secret-key: 310116
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true
+- name: RLCE-L3
+  claimed-nist-level: 3
+  claimed-security: IND-CPA
+  length-ciphertext: 1545
+  length-public-key: 450761
+  length-secret-key: 747393
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true
+- name: RLCE-L5
+  claimed-nist-level: 5
+  claimed-security: IND-CPA
+  length-ciphertext: 2640
+  length-public-key: 1232001
+  length-secret-key: 1773271
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true

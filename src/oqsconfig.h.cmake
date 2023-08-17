@@ -55,6 +55,11 @@
 #cmakedefine OQS_ENABLE_KEM_bike_l3 1
 #cmakedefine OQS_ENABLE_KEM_bike_l5 1
 
+#cmakedefine OQS_ENABLE_KEM_RLCE 1
+#cmakedefine OQS_ENABLE_KEM_rlce_l1 1
+#cmakedefine OQS_ENABLE_KEM_rlce_l3 1
+#cmakedefine OQS_ENABLE_KEM_rlce_l5 1
+
 #cmakedefine OQS_ENABLE_KEM_FRODOKEM 1
 #cmakedefine OQS_ENABLE_KEM_frodokem_640_aes 1
 #cmakedefine OQS_ENABLE_KEM_frodokem_640_shake 1

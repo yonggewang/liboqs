@@ -1,0 +1,7 @@
+set(_RLCE_OBJS "")
+if(OQS_ENABLE_KEM_rlce_l1)
+	add_library(RLCE OBJECT reedsolomon.c GaloisField.c fieldPoly.c bta.c fieldMatrix.c rlceCode.c)
+	target_include_directories(RLCE PRIVATE ${PROJECT_SOURCE_DIR}/src/kem/rlce)
+	set(_RLCE_OBJS ${_RLCE_OBJS} $<TARGET_OBJECTS:RLCE>)
+endif()
+set(RLCE_OBJS ${_RLCE_OBJS} PARENT_SCOPE)

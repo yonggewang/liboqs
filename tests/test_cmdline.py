@@ -6,7 +6,7 @@ import pytest
 import sys
 
 @helpers.filtered_test
-@pytest.mark.parametrize('program', ['example_kem', 'example_sig'])
+@pytest.mark.parametrize('program', ['example_kem', 'example_sig', 'example_kem_rlce'])
 def test_examples(program):
     helpers.run_subprocess(
         [helpers.path_to_executable(program)],
